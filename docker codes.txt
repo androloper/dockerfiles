@@ -1,0 +1,8 @@
+docker login (login from docker desktop or docherhub to make it easier)
+docker logout
+
+docker build -t nickname/repositoryname:versionname .  (dont forget to .(dot) if you arent using versionname it comes latest as a default)
+
+docker push nickname/repositoryname:versionname (for pushing to the cloud(docker hub))
+
+docker run [--restart always] [--name containername] [-p (port out):(port in)] [--env connectionstring='database path'] [--env DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false] -d nickname/repositoryname:versionname (If you open docker desktop in startup, it automatically makes it active when the computer opens.)
