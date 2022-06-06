@@ -8,8 +8,8 @@ docker push nickname/repositoryname:versionname (for pushing to the cloud(docker
 docker pull nickname/repositoryname:versionname (for pulling from the cloud(docker hub))
 
 (if http is active)
-docker run --rm -it [--restart always] [--name containername] [-p (port out):(port in)] [--env connectionstring='database path'] [--env DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false] -d nickname/repositoryname:versionname (If you open docker desktop in startup, it automatically makes it active when the computer opens.)
+docker run -it [--restart always] [--name containername] [-p (port out):(port in)] [--env connectionstring='database path'] [--env DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false] -d nickname/repositoryname:versionname (If you open docker desktop in startup, it automatically makes it active when the computer opens.)
 
 (if https is active)
-docker run —rm -it [—name containername] [-p (portout):(portin)][-e ASPNETCORE_URLS=“https://+;http://+”] [-e ASPNETCORE_HTTPS_PORT=(portout)] [-e ASPNETCORE_Kestrel__Certificates__Default__Password=“pass”] [-e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/ssl.pfx] [-v path] username/repositoryname:versionname
+docker run [--restart always] -it [--name containername] [-p (portout):(portin)][-e ASPNETCORE_URLS=“https://+;http://+”] [-e ASPNETCORE_HTTPS_PORT=(portout)] [-e ASPNETCORE_Kestrel__Certificates__Default__Password=“pass”] [-e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/ssl.pfx] [-v path] username/repositoryname:versionname
 
