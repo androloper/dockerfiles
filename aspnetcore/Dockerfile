@@ -8,8 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["CoreWebApi/CoreWebApi.csproj", "CoreWebApi/"]
-COPY ["BLL/BLL.csproj", "BLL/"]
-COPY ["DAL/DAL.csproj", "DAL/"]
+COPY ["BLL/BLL.csproj", "BLL/"] //if there is no layer
+COPY ["DAL/DAL.csproj", "DAL/"] //you do not need these 2 row
 RUN dotnet restore "CoreWebApi/CoreWebApi.csproj"
 COPY . .
 WORKDIR "/src/CoreWebApi"
